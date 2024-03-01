@@ -6,12 +6,13 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Button} from 'react-native';
 
 function App(): React.JSX.Element {
   return (
     <View>
       <Text style={{fontSize: 50}}>Hello React Native</Text>
+      <Button title="Press Here" />
     </View>
   );
 }
