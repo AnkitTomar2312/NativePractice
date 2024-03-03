@@ -17,7 +17,7 @@ function App(): React.JSX.Element {
   return (
     <View>
       <Text style={{fontSize: 60}}>{data}</Text>
-      <Text style={{fontSize: 50}}>Hello React Native</Text>
+      <Text style={{fontSize: 50, padding: 5}}>Hello React Native</Text>
       <Button title="Press Here" color={'green'} onPress={fruit} />
     </View>
   );
