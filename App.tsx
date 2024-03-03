@@ -6,21 +6,37 @@
  */
 
 import React, {useState} from 'react';
-import {Text, View, Button} from 'react-native';
+import {Text, View, Button, StyleSheet} from 'react-native';
+import InputComponent from './components/Input';
 
 function App(): React.JSX.Element {
   const [data, setDate] = useState(100);
   const fruit = () => {
-    setDate(600);
+    setDate(200);
     console.log('clicked');
   };
   return (
     <View>
-      <Text style={{fontSize: 60}}>{data}</Text>
-      <Text style={{fontSize: 50, padding: 5}}>Hello React Native</Text>
+      <Text style={styles.textBox}>{data}</Text>
+      <Text style={styles.textBox}>Hello React Native</Text>
       <Button title="Press Here" color={'green'} onPress={fruit} />
+      <InputComponent />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  textBox: {
+    fontSize: 30,
+    fontFamily: 'Arial',
+    padding: 15,
+    backgroundColor: 'red',
+    color: 'white',
+    marginTop: 20,
+    width: 300,
+    textAlign: 'center',
+    borderRadius: 10,
+  },
+});
 
 export default App;
