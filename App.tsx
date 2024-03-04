@@ -8,6 +8,7 @@
 import React, {useState} from 'react';
 import {Text, View, Button, StyleSheet} from 'react-native';
 import InputComponent from './components/Input';
+import MapFunction from './components/MapFunction';
 
 function App(): React.JSX.Element {
   const [data, setDate] = useState(100);
@@ -21,6 +22,7 @@ function App(): React.JSX.Element {
       <Text style={styles.textBox}>Hello React Native</Text>
       <Button title="Press Here" color={'green'} onPress={fruit} />
       <InputComponent />
+      <MapFunction />
     </View>
   );
 }
