@@ -20,12 +20,6 @@ function App(): React.JSX.Element {
   };
   return (
     <View>
-      {/* <Text style={styles.textBox}>{data}</Text>
-      <Text style={styles.textBox}>Hello React Native</Text>
-      <Button title="Press Here" color={'green'} onPress={fruit} />
-      <InputComponent /> */}
-      {/* <MapFunction /> */}
-      {/* <Sectionlist /> */}
       <ClassComponents />
     </View>
   );
