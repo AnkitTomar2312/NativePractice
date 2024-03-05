@@ -9,6 +9,7 @@ import React, {useState} from 'react';
 import {Text, View, Button, StyleSheet} from 'react-native';
 import InputComponent from './components/Input';
 import MapFunction from './components/MapFunction';
+import Sectionlist from './components/SectionList';
 
 function App(): React.JSX.Element {
   const [data, setDate] = useState(100);
@@ -18,11 +19,12 @@ function App(): React.JSX.Element {
   };
   return (
     <View>
-      <Text style={styles.textBox}>{data}</Text>
+      {/* <Text style={styles.textBox}>{data}</Text>
       <Text style={styles.textBox}>Hello React Native</Text>
       <Button title="Press Here" color={'green'} onPress={fruit} />
-      <InputComponent />
-      <MapFunction />
+      <InputComponent /> */}
+      {/* <MapFunction /> */}
+      <Sectionlist />
     </View>
   );
 }
