@@ -10,6 +10,7 @@ import {Text, View, Button, StyleSheet} from 'react-native';
 import InputComponent from './components/Input';
 import MapFunction from './components/MapFunction';
 import Sectionlist from './components/SectionList';
+import ClassComponents from './components/ClassComponents';
 
 function App(): React.JSX.Element {
   const [data, setDate] = useState(100);
@@ -24,7 +25,8 @@ function App(): React.JSX.Element {
       <Button title="Press Here" color={'green'} onPress={fruit} />
       <InputComponent /> */}
       {/* <MapFunction /> */}
-      <Sectionlist />
+      {/* <Sectionlist /> */}
+      <ClassComponents />
     </View>
   );
 }
