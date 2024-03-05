@@ -3,19 +3,29 @@ import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import Students from './Student';
 
 class App extends Component {
-  render() {
-    fruit = () => {
-      console.log('Apple');
+  constructor() {
+    super();
+    this.state = {
+      name: 'Anil',
+      age: 20,
     };
+  }
+  updateName(val) {
+    this.setState({name: val});
+  }
+  render() {
     return (
       <View>
-        <Text style={styles.heading}>Class Component</Text>
+        <Text style={styles.heading}>
+          {this.state.name} {this.state.age}
+        </Text>
         <TextInput
           style={{padding: 20, backgroundColor: 'silver'}}
           placeholder="Enter Your name"
+          onChangeText={text => this.updateName(text)}
         />
         <Button title="login" onPress={this.fruit} />
-        <Students />
+        <Students name={this.state.name} />
       </View>
     );
   }
