@@ -11,6 +11,7 @@ import InputComponent from './components/Input';
 import MapFunction from './components/MapFunction';
 import Sectionlist from './components/SectionList';
 import ClassComponents from './components/ClassComponents';
+import FunctionalComponents from './components/FunctionalComponents';
 
 function App(): React.JSX.Element {
   const [data, setDate] = useState(100);
@@ -20,7 +21,7 @@ function App(): React.JSX.Element {
   };
   return (
     <View>
-      <ClassComponents />
+      <FunctionalComponents />
     </View>
   );
 }
