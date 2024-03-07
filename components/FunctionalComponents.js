@@ -1,13 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 import {create} from 'react-test-renderer';
 
 const FunctionalComponents = () => {
   const [count, setCount] = useState(0);
   const [show, setShow] = useState(true);
+
+  let counter = setTimeout(() => {
+    setCount(count + 1);
+  }, 1000);
+
   useEffect(() => {
-    console.warn('Count mounted');
+    console.warn('Component  mounted');
   }, [count]);
+
+  const stopTimer = () => {
+    console.warn('Component unmounted');
+    clearInterval(counter);
+  };
   return (
     <View>
       <Text style={styles.title}>Functional Components {count}</Text>
@@ -15,8 +25,7 @@ const FunctionalComponents = () => {
       <Button
         title="Update count"
         onPress={() => {
-          setCount(count + 1);
-          setShow(false);
+          stopTimer();
         }}
       />
     </View>
