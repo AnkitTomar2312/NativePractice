@@ -7,11 +7,7 @@
 
 import React, {useState} from 'react';
 import {Text, View, Button, StyleSheet} from 'react-native';
-import InputComponent from './components/Input';
-import MapFunction from './components/MapFunction';
-import Sectionlist from './components/SectionList';
-import ClassComponents from './components/ClassComponents';
-import FunctionalComponents from './components/FunctionalComponents';
+import Responsive from './components/Responsive';
 
 function App(): React.JSX.Element {
   const [data, setDate] = useState(100);
@@ -19,25 +15,7 @@ function App(): React.JSX.Element {
     setDate(200);
     console.log('clicked');
   };
-  return (
-    <View>
-      <FunctionalComponents />
-    </View>
-  );
+  return <Responsive />;
 }
-
-const styles = StyleSheet.create({
-  textBox: {
-    fontSize: 30,
-    fontFamily: 'Arial',
-    padding: 15,
-    backgroundColor: 'red',
-    color: 'white',
-    marginTop: 20,
-    width: 300,
-    textAlign: 'center',
-    borderRadius: 10,
-  },
-});
 
 export default App;
