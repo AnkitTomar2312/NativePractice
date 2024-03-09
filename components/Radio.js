@@ -2,32 +2,54 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 const Radio = () => {
-  const [selectRadio, setSelectRadio] = useState(0);
+  const [selectRadio, setSelectRadio] = useState(1);
+  const array = [
+    {
+      id: 1,
+      name: 'User 1',
+    },
+    {
+      id: 2,
+      name: 'User 2',
+    },
+    {
+      id: 3,
+      name: 'User 3',
+    },
+    {
+      id: 4,
+      name: 'User 4',
+    },
+    {
+      id: 5,
+      name: 'User 5',
+    },
+    {
+      id: 6,
+      name: 'User 6',
+    },
+  ];
   return (
     <>
       <View style={styles.main}>
-        <TouchableOpacity
-          onPress={() => {
-            setSelectRadio(1);
-          }}>
-          <View style={styles.radioWrapper}>
-            <View style={styles.radio}>
-              {selectRadio == 1 && <View style={styles.radioBg}></View>}
-            </View>
-            <Text style={styles.radioText}>Radio 1</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            setSelectRadio(2);
-          }}>
-          <View style={styles.radioWrapper}>
-            <View style={styles.radio}>
-              {selectRadio == 2 && <View style={styles.radioBg}></View>}
-            </View>
-            <Text style={styles.radioText}>Radio 2</Text>
-          </View>
-        </TouchableOpacity>
+        {array.map(item => {
+          return (
+            <TouchableOpacity
+              key={item.id}
+              onPress={() => {
+                setSelectRadio(item.id);
+              }}>
+              <View style={styles.radioWrapper}>
+                <View style={styles.radio}>
+                  {selectRadio == item.id && (
+                    <View style={styles.radioBg}></View>
+                  )}
+                </View>
+                <Text style={styles.radioText}>{item.name}</Text>
+              </View>
+            </TouchableOpacity>
+          );
+        })}
       </View>
     </>
   );
