@@ -6,8 +6,7 @@
  */
 
 import React, {useState} from 'react';
-import {Text, View, Button, StyleSheet} from 'react-native';
-import Responsive from './components/Responsive';
+import ButtonStyling from './components/ButtonStyling';
 
 function App(): React.JSX.Element {
   const [data, setDate] = useState(100);
@@ -15,7 +14,7 @@ function App(): React.JSX.Element {
     setDate(200);
     console.log('clicked');
   };
-  return <Responsive />;
+  return <ButtonStyling />;
 }
 
 export default App;
