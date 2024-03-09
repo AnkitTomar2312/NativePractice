@@ -6,7 +6,7 @@
  */
 
 import React, {useState} from 'react';
-import ButtonStyling from './components/ButtonStyling';
+import Radio from './components/Radio';
 
 function App(): React.JSX.Element {
   const [data, setDate] = useState(100);
@@ -14,7 +14,7 @@ function App(): React.JSX.Element {
     setDate(200);
     console.log('clicked');
   };
-  return <ButtonStyling />;
+  return <Radio />;
 }
 
 export default App;
