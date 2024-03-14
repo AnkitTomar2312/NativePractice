@@ -6,15 +6,11 @@
  */
 
 import React, {useState} from 'react';
-import Radio from './components/Radio';
+import ActivityIndicator from './components/ActivityIndicator';
+import Modal from './components/Modal';
 
 function App(): React.JSX.Element {
-  const [data, setDate] = useState(100);
-  const fruit = () => {
-    setDate(200);
-    console.log('clicked');
-  };
-  return <Radio />;
+  return <Modal />;
 }
 
 export default App;
